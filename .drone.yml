@@ -1,0 +1,7 @@
+build:
+    image: python:3.5
+    commands:
+        - mkdir /test
+        - pip install -r requirements.txt
+        - pip install .
+        - nosetests -v

@@ -1,2 +1,4 @@
-# documd
-Simple markdown documentation from docstrings
+# Run tests
+```
+docker-compose run cli nosetests -v
+```
