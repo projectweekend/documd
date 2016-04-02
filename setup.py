@@ -9,11 +9,9 @@ setup(
     description='Simple markdown documentation from docstrings',
     url='https://github.com/projectweekend/documd',
     packages=['documd'],
-    install_requires=[
-        'Click==6.2',
-    ],
+    install_requires=[],
     entry_points='''
         [console_scripts]
-        pgtablemd=documd:cli
+        documd=documd:cli
     ''',
 )

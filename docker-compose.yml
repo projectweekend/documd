@@ -4,4 +4,4 @@ services:
         build: .
         volumes:
             - .:/src
-            - ./tests.py:/test/tests.py
+            - ./test:/test
