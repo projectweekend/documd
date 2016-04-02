@@ -3,4 +3,5 @@ build:
     commands:
         - pip install -r requirements.txt
         - pip install .
-        - ls test
+        - cd test
+        - ls
