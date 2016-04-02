@@ -1,27 +1,22 @@
 from collections import defaultdict
+import os
 import textwrap
+from .models import MarkownDocumentation
 
-documents = defaultdict(list)
+documents = defaultdict(MarkownDocumentation)
 
 
-def register(section):
+def register(doc_name, section, title):
     def wrapper(resource):
-        documents[section].append(textwrap.dedent(resource.__doc__))
+        documents[doc_name].add_document_to_section(
+            section=section,
+            title=title,
+            document=textwrap.dedent(resource.__doc__))
         return resource
     return wrapper
 
 
-def generate(output_file):
-    sorted_sections = sorted(documents.keys())
-
-    def write_section(of, section, docs):
-        of.write('## {0}\n'.format(section))
-        for doc in docs:
-            of.write('\n')
-            of.write(doc)
-
-    with open(output_file, 'w') as f:
-        for index, section in enumerate(sorted_sections):
-            if index != 0:
-                f.write('\n\n\n')
-            write_section(of=f, section=section, docs=documents[section])
+def generate(output_path):
+    for doc_name, documentation in documents.items():
+        with open(os.path.join(output_path, doc_name), 'w') as f:
+            documentation.to_file(f=f)

@@ -1,4 +1,12 @@
+# Table of contents
+
+
 ## That Stuff
+*[That route](#that-route)
+
+## This Stuff
+*[This route](#this-route)
+
 
 
 ### That route
@@ -25,10 +33,6 @@
 **Status Codes:**
 * `200` if successful
 * `400` if incorrect data provided
-
-
-
-## This Stuff
 
 
 ### This route
