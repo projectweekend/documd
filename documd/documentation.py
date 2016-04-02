@@ -19,4 +19,4 @@ def register(doc_name, section, title):
 def generate(output_path):
     for doc_name, documentation in documents.items():
         with open(os.path.join(output_path, doc_name), 'w') as f:
-            documentation.to_file(f=f)
+            documentation.write_to_file(f=f)

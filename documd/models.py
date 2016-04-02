@@ -30,6 +30,6 @@ class MarkownDocumentation:
                 f.write('### {0}\n'.format(title))
                 f.write(doc)
 
-    def to_file(self, f):
+    def write_to_file(self, f):
         self._write_toc(f=f)
         self._write_body(f=f)
