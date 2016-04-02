@@ -1,8 +1,7 @@
 build:
     image: python:3.5
-    volumes:
-        - ./test:/test
     commands:
         - pip install -r requirements.txt
         - pip install .
-        - cd /test && nosetests -v
+        - ls
+        # - cd /test && nosetests -v
