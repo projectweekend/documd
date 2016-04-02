@@ -4,4 +4,4 @@ build:
         - pip install -r requirements.txt
         - pip install .
         - cd test
-        - ls
+        - nosetests -v

@@ -3,8 +3,8 @@ from documd import documentation
 import example
 
 
-OUTPUT_FILE = '/test/test.md'
-OUTPUT_EXAMPLE = '/test/output_example.md'
+OUTPUT_FILE = './test.md'
+OUTPUT_EXAMPLE = './output_example.md'
 
 
 class CliTestCase(unittest.TestCase):
