@@ -10,8 +10,4 @@ setup(
     url='https://github.com/projectweekend/documd',
     packages=['documd'],
     install_requires=[],
-    entry_points='''
-        [console_scripts]
-        documd=documd:cli
-    ''',
 )
