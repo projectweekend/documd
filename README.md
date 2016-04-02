@@ -87,6 +87,8 @@ Then run your script to rebuild the markdown file:
 ./example_script.py
 ```
 
+An example output file can be found in [test/output_example.md](test/output_example.md).
+
 
 # Run tests
 ```
