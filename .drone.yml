@@ -3,7 +3,6 @@ build:
     volumes:
         - ./test:/test
     commands:
-        - mkdir /test
         - pip install -r requirements.txt
         - pip install .
-        - nosetests -v
+        - cd test && nosetests -v
