@@ -7,11 +7,9 @@ Write markdown documentation in your classes and decorate them with `documd.docu
 from documd import documentation
 
 
-@documentation.register(section='This Stuff')
+@documentation.register(doc_name='API_ROUTES.md', section='This Stuff', title='This route')
 class ThisApiRoute:
     """
-    ### This route
-
     **POST:**
     ```
     /v1/this
@@ -37,11 +35,9 @@ class ThisApiRoute:
     """
 
 
-@documentation.register(section='That Stuff')
+@documentation.register(doc_name='API_ROUTES.md', section='That Stuff', title='That route')
 class ThatApiRoute:
     """
-    ### That route
-
     **POST:**
     ```
     /v1/that
@@ -75,7 +71,7 @@ import example.py
 
 
 def main():
-    documentation.generate(output_file='SOME_DOCUMENTATION.md')
+    documentation.generate(output_path=='.')
 
 
 if __name__ == "__main__":
