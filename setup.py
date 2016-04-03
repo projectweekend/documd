@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='documd',
-    version='0.1.0',
+    version='0.1.1',
     author='Brian Hines',
     author_email='brian@projectweekend.net',
     description='Simple markdown documentation from docstrings',

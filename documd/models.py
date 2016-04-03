@@ -20,7 +20,7 @@ class MarkownDocumentation:
             f.write('\n')
             f.write('## {0}\n'.format(section))
             for t_index, title in enumerate(sorted(self.toc[section])):
-                f.write('*[{0}](#{1})\n'.format(title, title.lower().replace(' ', '-')))
+                f.write('* [{0}](#{1})\n'.format(title, title.lower().replace(' ', '-')))
 
     def _write_body(self, f):
         f.write('\n')
